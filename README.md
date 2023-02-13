@@ -19,3 +19,7 @@ React, React-router, Vite, JS, CSS only (no UI component library used)
 - I used Vitest for the few tests which I managed to write in the short time
 - Deep linking (e.g. `/details/13`) also works (useful for bookmarking a specific characters details view)
 - I used react-router for managing routes
+
+## Screenshot
+
+![Screenshot of the details view](screenshot.png "Screenshot")
