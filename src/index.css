@@ -1,69 +1,117 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+*, :root {
+    margin: 0;
+    padding: 0;
   }
-  a:hover {
-    color: #747bff;
+  
+  body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    color: gold;
+    background-color: black;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  input, select {
+    background-color: gold;
+    color: black;
   }
-}
+  
+  .overview {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vmin 0 1vmin 0;
+  }
+  
+  .range {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .filter {
+      flex-direction: column;
+    }
+    .range {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  
+  .counter {
+    padding: 1vmin 0 1vmin 0;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmin;
+    overflow-y: scroll;
+  }
+  
+  .list > .item {
+    padding: 1vmin;
+    border: 1px dotted gainsboro;
+  }
+  
+  .list > .item:hover {
+    background-color: gold;
+    color: black;
+  }
+  
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vmin;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loading-container > .spinner {
+    border: 1vmin solid gainsboro;
+    border-top: 1vmin solid gold;
+    border-radius: 50%;
+    width: 5vmin;
+    height: 5vmin;
+    animation: 0.8s spin linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .person-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vmin 0 2vmin 1vmin;
+    min-height: 25vh;
+    border: 1vmin solid gold;
+    position: relative;
+  }
+  
+  .person-details > .close {
+    width: 3vmin;
+    height: 3vmin;
+    position: absolute;
+    top: 1vmin;
+    right: 1vmin;
+    border: 2px solid gold;
+    border-radius: 5px;
+    color: gold;
+    background-color: black;
+  }
+  
+  .person-details > .close:hover {
+    background-color: gold;
+    color: black;
+  }
